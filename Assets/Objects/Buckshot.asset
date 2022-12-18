@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b4fc60b9d55e443b70aea08f6943c4, type: 3}
+  m_Name: Buckshot
+  m_EditorClassIdentifier: 
+  validWeapons:
+  - {fileID: 11400000, guid: 98ab54139efab9d40a9412136d585927, type: 2}
+  <Capacity>k__BackingField: 1
+  damage: 23
+  <Name>k__BackingField: Buckshot

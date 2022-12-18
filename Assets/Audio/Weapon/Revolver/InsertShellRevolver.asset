@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8815800073d4542b37ae05c2fd064e, type: 3}
+  m_Name: InsertShellRevolver
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 58f05b9dfaf190545b59d83d5ced0934, type: 3}
+  - {fileID: 8300000, guid: 93791fe6680a8d045a21e3ac901c03f5, type: 3}
+  - {fileID: 8300000, guid: 8023a22c6e08529449c2749033abd9ff, type: 3}
+  - {fileID: 8300000, guid: d425a92cf03fb724bb8d5be770a6b474, type: 3}
+  - {fileID: 8300000, guid: 48a44f94ca23131498b0b94b560cb3fa, type: 3}
+  - {fileID: 8300000, guid: 159df90332dec5540b1b1f70e93ffc41, type: 3}
+  volume:
+    minValue: 0.12672192
+    maxValue: 0.12672192
+  pitch:
+    minValue: 1
+    maxValue: 1
