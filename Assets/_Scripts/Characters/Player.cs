@@ -51,7 +51,17 @@ public class Player : Character
             return;
         }
 
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            var colls = Physics2D.OverlapCircleAll(transform.position, 1);
+            foreach (var item in colls)
+            {
+                if (item.TryGetComponent(out IInteractable interactable))
+                {
+                    interactable.Interact();
+                }
+            }
+        }
 
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"));
 
