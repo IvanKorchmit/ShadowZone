@@ -14,6 +14,7 @@ public class Player : Character
     private float angle;
     public Animator WeaponAnimator { get; set; }
     [field: SerializeField] public Transform ShootPoint;
+    [SerializeField] private AudioEvent stepSound;
     public Weapon WeaponInfo => weapon;
     public Inventory Backpack => inventory;
     public static Player Singleton { get; private set; }
@@ -26,6 +27,10 @@ public class Player : Character
     {
         Singleton = this;
 
+    }
+    public void PlayStep()
+    {
+        stepSound.Play(Audio);
     }
     protected override void Start()
     {

@@ -1,5 +1,93 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &439500547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439500548}
+  - component: {fileID: 439500549}
+  m_Layer: 0
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &439500548
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439500547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3600783798302917925}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.32, y: 0.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!331 &439500549
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439500547}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 25f74cbf00f75704bbd61b7b5f8cd458, type: 3}
+  m_MaskAlphaCutoff: 1
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 1
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 1
+  m_SpriteSortPoint: 1
 --- !u!1 &3600783797134350173
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +377,7 @@ Transform:
   - {fileID: 3600783797240728330}
   - {fileID: 3600783797244478485}
   - {fileID: 3600783798635469193}
+  - {fileID: 439500548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -314,23 +403,15 @@ MonoBehaviour:
       isUsed: 0
       <Ammo>k__BackingField: {fileID: 0}
       <Quantity>k__BackingField: 0
-    <WeaponBase>k__BackingField: {fileID: 11400000, guid: 98ab54139efab9d40a9412136d585927, type: 2}
+    <WeaponBase>k__BackingField: {fileID: 11400000, guid: 62287357fc9b1374a812ea7b3c3be3f6, type: 2}
   sight: {fileID: 3600783798635469193}
   arm: {fileID: 3600783797244478485}
   weaponVisuals: {fileID: 3600783797134350171}
   inventory:
-    <Ammos>k__BackingField:
-    - isUsed: 0
-      <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
-      <Quantity>k__BackingField: 2
-    - isUsed: 0
-      <Ammo>k__BackingField: {fileID: 11400000, guid: e543844e2d2f44848a48ee665cda7f12, type: 2}
-      <Quantity>k__BackingField: 12
-    - isUsed: 0
-      <Ammo>k__BackingField: {fileID: 11400000, guid: 217e40e7848ab034b9af79edee011035, type: 2}
-      <Quantity>k__BackingField: 12
+    <Ammos>k__BackingField: []
     <Weapons>k__BackingField: []
   ShootPoint: {fileID: 3600783797244478485}
+  stepSound: {fileID: 11400000, guid: 978140c937f526a48b437a6904c56af6, type: 2}
 --- !u!50 &3600783798302917923
 Rigidbody2D:
   serializedVersion: 4

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 27880953, guid: 90500b23c13bd5a48b677b64cf904278, type: 3}
+  m_Sprite: {fileID: 422985607, guid: 90500b23c13bd5a48b677b64cf904278, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3751478439928141215}
   - component: {fileID: 3751478439928141218}
   m_Layer: 0
-  m_Name: Buckshot
+  m_Name: point357
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo:
     isUsed: 0
-    <Ammo>k__BackingField: {fileID: 11400000, guid: 217e40e7848ab034b9af79edee011035, type: 2}
+    <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
     <Quantity>k__BackingField: 2
   onPickup: {fileID: 11400000, guid: aa107c9c7a6d65644a49f5362bd15c99, type: 2}
 --- !u!50 &3751478439928141218
