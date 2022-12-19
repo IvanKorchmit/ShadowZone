@@ -409,7 +409,28 @@ MonoBehaviour:
   weaponVisuals: {fileID: 3600783797134350171}
   inventory:
     <Ammos>k__BackingField: []
-    <Weapons>k__BackingField: []
+    <Weapons>k__BackingField:
+    - ammo:
+      - isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      - isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      - isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      - isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      - isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      currentAmmo:
+        isUsed: 0
+        <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
+        <Quantity>k__BackingField: 1
+      <WeaponBase>k__BackingField: {fileID: 11400000, guid: 62287357fc9b1374a812ea7b3c3be3f6, type: 2}
   ShootPoint: {fileID: 3600783797244478485}
   stepSound: {fileID: 11400000, guid: 978140c937f526a48b437a6904c56af6, type: 2}
 --- !u!50 &3600783798302917923

@@ -24,8 +24,16 @@ public class Enemy : Character
         los = GetComponent<LineOfSight>();
         seeker = GetComponent<Seeker>();
         los.OnPlayerSpot += Los_OnPlayerSpot;
+        if (Player.Singleton != null)
+        {
+            seeker.StartPath(transform.position, Player.Singleton.transform.position);
+        }
+        InvokeRepeating(nameof(FindPlayer), 0, 15);
     }
-
+    private void FindPlayer()
+    {
+        seeker.StartPath(transform.position, Player.Singleton.transform.position);
+    }
     private void Los_OnPlayerSpot()
     {
         spotSounds.Play(Audio);
@@ -47,6 +55,11 @@ public class Enemy : Character
         if (los.Sees && Player.Singleton != null)
         {
             seeker.StartPath(transform.position, Player.Singleton.transform.position);
+        }
+        if (Player.Singleton == null || (!los.Sees && Player.Singleton != null && !Player.Singleton.gameObject.activeSelf && aiPath.reachedEndOfPath))
+        {
+            RandomPath rand = RandomPath.Construct(transform.position, 100000);
+            seeker.StartPath(rand);
         }
         Animator.SetFloat("Speed", aiPath.velocity.normalized.magnitude);
         Visuals.flipX = aiPath.velocity.x < 0;

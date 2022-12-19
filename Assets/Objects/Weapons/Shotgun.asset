@@ -21,6 +21,7 @@ MonoBehaviour:
   insertSound: {fileID: 11400000, guid: 5dbd76fe47a581e46ba1e2f9b935e162, type: 2}
   cockSound: {fileID: 11400000, guid: ac3ae3ee56968a145bbbec7d079c761d, type: 2}
   ammoOut: {fileID: 11400000, guid: 0dd4023b99ea48141b4eee330f220680, type: 2}
+  <WeaponSlot>k__BackingField: 2
   m_Damage: 0
   openSound: {fileID: 0}
   closeSound: {fileID: 0}

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FoW;
+
 public class Player : Character
 {
     [SerializeField] private GameObject corpse;
@@ -40,12 +40,27 @@ public class Player : Character
         weaponVisuals = arm.GetComponentInChildren<SpriteRenderer>();
         WeaponAnimator = arm.GetComponentInChildren<Animator>();
         WeaponAnimator.runtimeAnimatorController = weapon.WeaponBase.Controller;
+        weapon = Backpack.GetWeapon(1, this);
     }
     private void FixedUpdate()
     {
         Move(direction.normalized);
 
     }
+
+    private void OnGUI()
+    {
+        if (Event.current.isKey)
+        {
+            if (Event.current.keyCode >= KeyCode.Alpha0 && Event.current.keyCode <= KeyCode.Alpha9)
+            {
+                int index = (Event.current.keyCode - KeyCode.Alpha0 + 10) % 10;
+                weapon = Backpack.GetWeapon(index, this);
+                WeaponAnimator.runtimeAnimatorController = weapon.WeaponBase.Controller;
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -55,7 +70,6 @@ public class Player : Character
             Destroy(gameObject);
             return;
         }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             var colls = Physics2D.OverlapCircleAll(transform.position, 1);

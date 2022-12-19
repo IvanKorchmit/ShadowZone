@@ -6,8 +6,8 @@ public class Weapon
     private bool open;
     [SerializeField] private List<AmmoItem> ammo;
     [SerializeField] private AmmoItem currentAmmo;
-    public AmmoBase AmmoBase => currentAmmo.Ammo;
-    public bool IsReady => currentAmmo?.Ammo ?? null != null;
+    public AmmoBase AmmoBase => currentAmmo?.Ammo ?? null;
+    public bool IsReady => currentAmmo?.Ammo ?? null != null && !currentAmmo.isUsed;
     public int AmmoCount => ammo.Count;
 
     [field: SerializeField] public WeaponBase WeaponBase { get; private set; }

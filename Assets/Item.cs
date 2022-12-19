@@ -6,10 +6,12 @@ public class Item : MonoBehaviour
 {
     public enum ItemType
     {
-        Ammo, Medkit, Weapon
+        Ammo, Medkit, Weapon, Key
     }
     [SerializeField] private ItemType type;
     [SerializeField] private AmmoItem ammo;
+    [SerializeField] private Weapon weapon;
+    [SerializeField] private int keyID;
 
     [SerializeField] private AudioEvent onPickup;
     private void Start()
@@ -21,9 +23,26 @@ public class Item : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Player.Singleton.Backpack.Ammos.Add(ammo);
-            onPickup.Play(Player.Singleton.Audio);
-            Destroy(gameObject);
+            if (type == ItemType.Ammo)
+            {
+                Player.Singleton.Backpack.Ammos.Add(ammo);
+                onPickup.Play(Player.Singleton.Audio);
+                Destroy(gameObject);
+            }
+            else if (type == ItemType.Weapon)
+            {
+                if (Player.Singleton.Backpack.AddWeapon(weapon))
+                {
+                    onPickup.Play(Player.Singleton.Audio);
+                    Destroy(gameObject);
+                }
+            }
+            else if (type == ItemType.Key)
+            {
+                Player.Singleton.Backpack.Keys.Add(keyID);
+                onPickup.Play(Player.Singleton.Audio);
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ public abstract class WeaponBase : ScriptableObject
     [SerializeField] private AudioEvent insertSound;
     [SerializeField] private AudioEvent cockSound;
     [SerializeField] private AudioEvent ammoOut;
-    
+    [field:SerializeField] public int WeaponSlot { get; set; }
     public string Name => name;
     public int Capacity => capacity;
     public abstract void Use(Player owner, float angle, AmmoBase ammoType);
