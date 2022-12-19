@@ -17,3 +17,4 @@ MonoBehaviour:
   <Capacity>k__BackingField: 1
   damage: 10
   <Name>k__BackingField: .357
+  knockback: 2

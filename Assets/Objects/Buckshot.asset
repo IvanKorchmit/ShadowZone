@@ -15,5 +15,6 @@ MonoBehaviour:
   validWeapons:
   - {fileID: 11400000, guid: 98ab54139efab9d40a9412136d585927, type: 2}
   <Capacity>k__BackingField: 1
-  damage: 23
+  damage: 10
   <Name>k__BackingField: Buckshot
+  knockback: 0.31

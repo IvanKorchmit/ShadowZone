@@ -132,7 +132,7 @@ public abstract class AmmoBase : ScriptableObject
     [SerializeField] private float damage;
     [field: SerializeField] public string Name { get; private set; }
     public float Damage => damage;
-    public abstract void OnEnemyImpact(Enemy enemy);
+    public abstract void OnEnemyImpact(Projectile projectile, Enemy enemy);
     public bool DoesWeaponFit(WeaponBase weapon)
     {
         foreach (WeaponBase w in validWeapons)

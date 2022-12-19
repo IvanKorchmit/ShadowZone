@@ -15,5 +15,6 @@ MonoBehaviour:
   validWeapons:
   - {fileID: 11400000, guid: 62287357fc9b1374a812ea7b3c3be3f6, type: 2}
   <Capacity>k__BackingField: 1
-  damage: 155
+  damage: 75
   <Name>k__BackingField: SLUG
+  knockback: 4

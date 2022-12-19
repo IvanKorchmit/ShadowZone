@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public enum ItemType
+    {
+        Ammo, Medkit, Weapon
+    }
+    [SerializeField] private ItemType type;
     [SerializeField] private AmmoItem ammo;
 
     [SerializeField] private AudioEvent onPickup;

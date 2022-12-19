@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
         }
         if (!collision.CompareTag("Player") && collision.TryGetComponent(out IDamagable damagable))
         {
-            ammo.OnEnemyImpact(damagable as Enemy);
+            ammo.OnEnemyImpact(this, damagable as Enemy);
             transform.DetachChildren();
             Destroy(gameObject);
         }
