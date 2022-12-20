@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 439500548}
+  - component: {fileID: 3913209846866385128}
   - component: {fileID: 439500549}
   m_Layer: 0
   m_Name: Mask
@@ -17,8 +17,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &439500548
-RectTransform:
+--- !u!4 &3913209846866385128
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -32,11 +32,6 @@ RectTransform:
   m_Father: {fileID: 3600783798302917925}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.32, y: 0.32}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!331 &439500549
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -377,7 +372,7 @@ Transform:
   - {fileID: 3600783797240728330}
   - {fileID: 3600783797244478485}
   - {fileID: 3600783798635469193}
-  - {fileID: 439500548}
+  - {fileID: 3913209846866385128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -431,6 +426,7 @@ MonoBehaviour:
         <Ammo>k__BackingField: {fileID: 11400000, guid: d1766dd7efd9b234caea3edf3291f433, type: 2}
         <Quantity>k__BackingField: 1
       <WeaponBase>k__BackingField: {fileID: 11400000, guid: 62287357fc9b1374a812ea7b3c3be3f6, type: 2}
+    <Keys>k__BackingField: 
   ShootPoint: {fileID: 3600783797244478485}
   stepSound: {fileID: 11400000, guid: 978140c937f526a48b437a6904c56af6, type: 2}
 --- !u!50 &3600783798302917923

@@ -6,6 +6,12 @@ public class Hidable : MonoBehaviour, IInteractable
 {
     [SerializeField] private FogOfWarUnit fogOfWarUnit;
     private Player currentPlayer;
+
+    [SerializeField] private AudioEvent open;
+    [SerializeField] private AudioEvent close;
+    [SerializeField] private AudioSource audio;
+
+
     private void Start()
     {
         fogOfWarUnit.enabled = false;
@@ -20,6 +26,7 @@ public class Hidable : MonoBehaviour, IInteractable
                 
                 fogOfWarUnit.enabled = false;
                 currentPlayer = null;
+                close.Play(audio);
             }
         }
     }
@@ -30,6 +37,7 @@ public class Hidable : MonoBehaviour, IInteractable
             currentPlayer = Player.Singleton;
             currentPlayer.gameObject.SetActive(false);
             fogOfWarUnit.enabled = true;
+            open.Play(audio);
 
         }
     }

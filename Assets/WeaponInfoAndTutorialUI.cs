@@ -16,6 +16,7 @@ public class WeaponInfoAndTutorialUI : MonoBehaviour
 
         Weapon weapon = Player.Singleton.WeaponInfo;
         title.text = weapon.WeaponBase.Name;
+
         ammoType.text = weapon.AmmoBase != null ? weapon.AmmoBase.Name : "None";
         if (weapon.WeaponBase is Shotgun)
         {
