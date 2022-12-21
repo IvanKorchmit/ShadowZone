@@ -32,6 +32,7 @@ public class Enemy : Character
     }
     private void FindPlayer()
     {
+        if (Player.Singleton == null) return;
         seeker.StartPath(transform.position, Player.Singleton.transform.position);
     }
     private void Los_OnPlayerSpot()

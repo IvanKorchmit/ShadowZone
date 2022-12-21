@@ -11,12 +11,8 @@ public class PlayerFollow : MonoBehaviour
     private Vector2 lastPlayerPosition;
     private void Start()
     {
+        if (Player.Singleton == null) return;
         lastPlayerPosition = Player.Singleton.transform.position;
-    }
-
-    private void Player_onPlayerJumpOrLand()
-    {
-        StartCoroutine(Shake(0.009f, 0.5f, 0.5f));
     }
     private void LateUpdate()
     {

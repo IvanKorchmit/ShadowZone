@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TransitionEffect : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
     public static TransitionEffect Instance { get; private set; }
 
     private void Awake()

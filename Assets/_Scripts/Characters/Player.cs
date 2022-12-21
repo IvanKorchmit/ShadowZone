@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : Character
 {
     [SerializeField] private GameObject corpse;
@@ -18,6 +18,7 @@ public class Player : Character
     public Weapon WeaponInfo => weapon;
     public Inventory Backpack => inventory;
     public static Player Singleton { get; private set; }
+    public static GameObject Backup { get; private set; }
     private static Camera mainCamera;
     public override void Damage(float damage)
     {
@@ -25,9 +26,26 @@ public class Player : Character
     }
     private void Awake()
     {
-        Singleton = this;
-
+        mainCamera = Camera.main;
+        if (Singleton == null && Backup == null)
+        {
+            Singleton = this;
+            SceneManager.activeSceneChanged += OnSceneChanged;
+            DontDestroyOnLoad(Singleton.gameObject);
+        }
     }
+
+    private void OnSceneChanged(Scene scene, Scene next)
+    {
+        if (Backup != null && Singleton != null)
+        {
+            Destroy(Backup);
+            Backup = Instantiate(Singleton.gameObject);
+            Backup.SetActive(false);
+            DontDestroyOnLoad(Backup);
+        }
+    }
+
     public void PlayStep()
     {
         stepSound.Play(Audio);
@@ -35,8 +53,38 @@ public class Player : Character
     protected override void Start()
     {
         base.Start();
+
+        if (Singleton == this)
+        {
+            if (Backup == null)
+            {
+                Backup = Instantiate(gameObject);
+                Backup.SetActive(false);
+                DontDestroyOnLoad(Backup);
+            }
+
+        }
+        else if (Singleton != null)
+        {
+            Singleton.transform.position = transform.position;
+            Destroy(gameObject);
+            return;
+        }
+        else if (Backup != null)
+        {
+            Singleton = Backup.GetComponent<Player>();
+            Singleton.gameObject.SetActive(true);
+            Backup = null;
+            if (Singleton != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+        }
+
+
         weaponVisuals.sprite = weapon.WeaponBase.Sprite;
-        mainCamera = Camera.main;
         weaponVisuals = arm.GetComponentInChildren<SpriteRenderer>();
         WeaponAnimator = arm.GetComponentInChildren<Animator>();
         WeaponAnimator.runtimeAnimatorController = weapon.WeaponBase.Controller;
@@ -67,6 +115,7 @@ public class Player : Character
         if (Stats.Health <= 0)
         {
             Instantiate(corpse, transform.position, Quaternion.identity);
+            SceneManager.activeSceneChanged -= OnSceneChanged;
             Destroy(gameObject);
             return;
         }
@@ -138,8 +187,8 @@ public class Player : Character
 
     private void Attack()
     {
-            weapon.Shoot(this, angle);
+        weapon.Shoot(this, angle);
 
     }
-    
+
 }
