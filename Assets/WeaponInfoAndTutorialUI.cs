@@ -26,7 +26,7 @@ public class WeaponInfoAndTutorialUI : MonoBehaviour
         }
         else
         {
-            canPull.color = !weapon.IsReady && weapon.AmmoCount > 0 ? Color.white : grey;
+            canPull.color = !weapon.AreAllAmmosUsable() ? Color.white : grey;
             canLoad.color = Player.Singleton.Backpack.HasAmmo(weapon.WeaponBase, out _) && weapon.AmmoCount < weapon.WeaponBase.Capacity ? Color.white : grey;
             canShoot.color = weapon.IsReady ? Color.white : grey;
         }

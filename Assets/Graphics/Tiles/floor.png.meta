@@ -449,7 +449,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,6 +457,27 @@ TextureImporter:
       bones: []
       spriteID: 30206c698c34cd5448dfc6f1c2eb30e4
       internalID: -1749777193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab4e201918850749846ed60e1a808df
+      internalID: -2048731168
       vertices: []
       indices: 
       edges: []
@@ -488,6 +509,7 @@ TextureImporter:
       floor_10: -1396148302
       floor_15: -642369971
       floor_6: 1853662770
+      floor_17: -2048731168
       floor_0: -1406580199
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Stats>k__BackingField:
-    <Health>k__BackingField: 100
+    <Health>k__BackingField: 75
     <Speed>k__BackingField: 2
   hitSounds: {fileID: 11400000, guid: bab0356220b53a54fb51b5a9b6115396, type: 2}
   bloodParticle: {fileID: 7128178855508259999, guid: 07da59ff1252b3c4894ad08bbcb20dbb, type: 3}

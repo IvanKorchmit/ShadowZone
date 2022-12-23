@@ -15,6 +15,7 @@ public class Player : Character
     public Animator WeaponAnimator { get; set; }
     [field: SerializeField] public Transform ShootPoint;
     [SerializeField] private AudioEvent stepSound;
+    [SerializeField] private AudioEvent waterStepSound;
     public Weapon WeaponInfo => weapon;
     public Inventory Backpack => inventory;
     public static Player Singleton { get; private set; }
@@ -26,6 +27,7 @@ public class Player : Character
     }
     private void Awake()
     {
+        inventory.Keys.Clear();
         mainCamera = Camera.main;
         if (Singleton == null && Backup == null)
         {
@@ -48,6 +50,11 @@ public class Player : Character
 
     public void PlayStep()
     {
+        if (Stats.InitSpeed > Stats.Speed)
+        {
+            waterStepSound.Play(Audio);
+            return;
+        }
         stepSound.Play(Audio);
     }
     protected override void Start()
@@ -92,7 +99,7 @@ public class Player : Character
     }
     private void FixedUpdate()
     {
-        Move(direction.normalized);
+        Move(direction.normalized * (Stats.Speed / Stats.InitSpeed));
 
     }
 

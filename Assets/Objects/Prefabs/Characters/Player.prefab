@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3600783798302917925}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &439500549
 SpriteMask:
@@ -219,7 +219,7 @@ Transform:
   m_Children:
   - {fileID: 3600783798269429375}
   m_Father: {fileID: 3600783798302917925}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3600783797240728328
 SpriteRenderer:
@@ -303,7 +303,7 @@ Transform:
   m_Children:
   - {fileID: 3600783797134350170}
   m_Father: {fileID: 3600783798302917925}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3600783798269429374
 GameObject:
@@ -369,10 +369,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3913209846866385128}
   - {fileID: 3600783797240728330}
   - {fileID: 3600783797244478485}
   - {fileID: 3600783798635469193}
-  - {fileID: 3913209846866385128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -429,6 +429,7 @@ MonoBehaviour:
     <Keys>k__BackingField: 
   ShootPoint: {fileID: 3600783797244478485}
   stepSound: {fileID: 11400000, guid: 978140c937f526a48b437a6904c56af6, type: 2}
+  waterStepSound: {fileID: 11400000, guid: 16e06dddda605834a81d002c03144ac7, type: 2}
 --- !u!50 &3600783798302917923
 Rigidbody2D:
   serializedVersion: 4
@@ -613,7 +614,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3600783798302917925}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3600783798635469206
 MonoBehaviour:

@@ -14,7 +14,11 @@ public class LineOfSight : MonoBehaviour
     private void Update()
     {
         Player pl = Player.Singleton;
-        if (pl == null || !pl.gameObject.activeSelf) return;
+        if (pl == null || !pl.gameObject.activeSelf)
+        {
+            isCurrentlySeeing = false;
+            return;
+        } 
         Vector2 direction = pl.transform.position - transform.position;
         direction.Normalize();
 

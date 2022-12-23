@@ -53,7 +53,7 @@ public class Enemy : Character
     }
     private void Update()
     {
-        if (los.Sees && Player.Singleton != null)
+        if (los.Sees && Player.Singleton != null && Player.Singleton.gameObject.activeSelf)
         {
             seeker.StartPath(transform.position, Player.Singleton.transform.position);
         }

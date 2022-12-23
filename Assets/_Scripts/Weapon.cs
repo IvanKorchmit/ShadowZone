@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+
 [System.Serializable]
 public class Weapon
 {
@@ -54,6 +55,20 @@ public class Weapon
         this.ammo.Add(new AmmoItem(ammo, 1));
         return true;
     }
+
+    public bool AreAllAmmosUsable()
+    {
+        int count = 0;
+        foreach (var item in ammo)
+        {
+            if (!item.isUsed)
+            {
+                count++;
+            }
+        }
+        return count != 0 || !(currentAmmo?.isUsed ?? false);
+    }
+
     public void Insert(Inventory backpack, Player owner)
     {
         

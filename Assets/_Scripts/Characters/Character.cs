@@ -16,6 +16,7 @@ public abstract class Character : MonoBehaviour, IDamagable
         Animator = GetComponent<Animator>();
         Visuals = GetComponentInChildren<SpriteRenderer>();
         Audio = GetComponentInChildren<AudioSource>();
+        Stats.InitSpeed = Stats.Speed;
     }
 
     public abstract void Damage(float damage);
@@ -36,4 +37,5 @@ public class Stats
 {
     [field: SerializeField] public float Health { get; set; }
     [field: SerializeField] public float Speed { get; set; }
+    public float InitSpeed { get; set; }
 }

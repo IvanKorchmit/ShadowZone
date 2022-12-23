@@ -196,10 +196,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbbec8e2f0940e44a6af2c065cd275a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   ammo:
     isUsed: 0
     <Ammo>k__BackingField: {fileID: 11400000, guid: 217e40e7848ab034b9af79edee011035, type: 2}
-    <Quantity>k__BackingField: 2
+    <Quantity>k__BackingField: 1
+  weapon:
+    ammo: []
+    currentAmmo:
+      isUsed: 0
+      <Ammo>k__BackingField: {fileID: 0}
+      <Quantity>k__BackingField: 0
+    <WeaponBase>k__BackingField: {fileID: 0}
+  keyID: 0
   onPickup: {fileID: 11400000, guid: aa107c9c7a6d65644a49f5362bd15c99, type: 2}
 --- !u!50 &3751478439928141218
 Rigidbody2D:
